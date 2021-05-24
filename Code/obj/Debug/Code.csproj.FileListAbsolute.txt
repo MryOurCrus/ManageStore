@@ -1,0 +1,12 @@
+D:\BTL_CNPM\CongNghePM\Code\bin\Debug\Code.exe.config
+D:\BTL_CNPM\CongNghePM\Code\bin\Debug\Code.exe
+D:\BTL_CNPM\CongNghePM\Code\bin\Debug\Code.pdb
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.csprojAssemblyReference.cache
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.Login.resources
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.Properties.Resources.resources
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.csproj.GenerateResource.cache
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.csproj.CoreCompileInputs.cache
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.exe
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.pdb
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.ChangePass.resources
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.Home.resources
