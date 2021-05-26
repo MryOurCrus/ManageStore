@@ -19,7 +19,7 @@ namespace Code
         Connections conn = new Connections();
 
         public static string permission = "";
-
+        public static string nameNV = "";
         private void btLogin_Click(object sender, EventArgs e)
         {
 
@@ -33,7 +33,7 @@ namespace Code
                 if (conn.XemDL(sql).Rows.Count != 0)
                 {
                     Login.permission = Convert.ToString(conn.XemDL("select quyen from taikhoan where tentk='" + ten + "' and mk='" + mk + "' ").Rows[0][0].ToString().Trim());
-                    MessageBox.Show(Login.permission);
+                    Login.nameNV = Convert.ToString(conn.XemDL("select manv from taikhoan where tentk='" + ten + "' and mk='" + mk + "' ").Rows[0][0].ToString().Trim());
                     this.Hide();
                     Home frm = new Home();
                     frm.Show();

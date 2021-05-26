@@ -19,22 +19,28 @@ namespace Code
 
         private void changePassword_Click(object sender, EventArgs e)
         {
-            this.Hide();
             ChangePass frm = new ChangePass();
             frm.Show();
         }
 
         private void hàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
             ProductManage frm = new ProductManage();
             frm.Show();
         }
 
         private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+
             Bill frm = new Bill();
+            frm.Show();
+        }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new Customer();
+
             frm.Show();
         }
     }

@@ -24,3 +24,5 @@ D:\GITHUB\Code\obj\Debug\Code.exe
 D:\GITHUB\Code\obj\Debug\Code.pdb
 D:\GITHUB\Code\obj\Debug\Code.ProductManage.resources
 D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.ProductManage.resources
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.Bill.resources
+D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.Customer.resources

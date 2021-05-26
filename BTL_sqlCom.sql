@@ -42,24 +42,15 @@ create table khachhang(
 makh varchar(10) primary key not null,                             --mã khách hàng
 tenkh Nvarchar(30),                                                --tên khách hàng
 diachi Nvarchar(30),                                               --địa chỉ
-sdt int,                                                           --số điện thoại
+sdt varchar(10),                                                           --số điện thoại
 mahdr varchar(10) foreign key (mahdr) references hoadonra(mahdr))  --mã hóa đơn
-
-
-create table nhapkho(                                              
-ma varchar(10) primary key not null,                               --mã hàng nhập
-ten Nvarchar(30),                                                  --tên hàng nhập
-soluong int,                                                       --số lượng
-gianhap int,                                                       --giá nhập
-ngaynhap date,                                                     --ngày nhập
-tonkho int,                                                        --tồn kho
-manv varchar(10) foreign key (manv) references nhanvien(manv))     --mã nhân viên
 
 create table taikhoan
 (
 	tentk nvarchar(50),
 	mk nvarchar(50),
 	quyen nvarchar(50),
+	manv varchar(10)
 )
 
 insert into nhanvien values ('NV01',N'vũ mạnh dũng','12/12/1999',N'hà nội','Nam','0123456789')
@@ -113,26 +104,6 @@ insert into sanpham values ('sp24',N'pepsi','7000')
 insert into sanpham values ('sp25',N'bia hà nội','12000')
 insert into sanpham values ('sp26',N'gà nướng susan','30000')
 
-
-insert into nhapkho values ('sp01',N'đùi gà','100','15000','10/18/2019','10','NV06')
-insert into nhapkho values ('sp02',N'xúc xích','200','8000','10/18/2019','20','NV06')
-insert into nhapkho values ('sp03',N'nem chua','300','3000','10/18/2019','9','NV06')
-insert into nhapkho values ('sp04',N'gà','10','1000000','10/18/2019','0','NV07')
-insert into nhapkho values ('sp05',N'coca','100','500000','10/18/2019','10','NV08')
-insert into nhapkho values ('sp06',N'bia hà nội','100','700000','10/18/2019','20','NV07')
-insert into nhapkho values ('sp07',N'óc đậu','10','100000','10/18/2019','1','NV08')
-insert into nhapkho values ('sp08',N'cá viên chiên','30','600000','10/18/2019','5','NV07')
-insert into nhapkho values ('sp09',N'trứng lộn','200','600000','10/18/2019','0','NV06')
-insert into nhapkho values ('sp10',N'weakup 247','100','600000','10/18/2019','10','NV08')
-insert into nhapkho values ('sp11',N'nutri','50','250000','10/19/2019','4','NV06')
-insert into nhapkho values ('sp12',N'mít','3','150000','10/19/2019','1','NV07')
-insert into nhapkho values ('sp13',N'ốc','20','200000','10/19/2019','0','NV08')
-insert into nhapkho values ('sp14',N'sữa chua','200','1000000','10/19/2019','30','NV08')
-insert into nhapkho values ('sp15',N'bánh mì','30','90000','10/19/2019','0','NV06')
-insert into nhapkho values ('sp16',N'thịt lợn','30','1500000','10/19/2019','1','NV07')
-insert into nhapkho values ('sp17',N'thịt bò','10','1500000','10/19/2019','2','NV08')
-insert into nhapkho values ('sp18',N'phở','10','200000','10/19/2019','0','NV06')
-insert into nhapkho values ('sp19',N'bánh đa','100','200000','10/19/2019','10','NV07')
 
 
 --------------------------------------------------------------------------------------------------------------
