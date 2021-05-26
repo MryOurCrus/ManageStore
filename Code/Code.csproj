@@ -58,6 +58,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductManage.Designer.cs">
+      <DependentUpon>ProductManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="StringConn.cs" />
     <Compile Include="Connections.cs" />
     <Compile Include="Login.cs">
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductManage.resx">
+      <DependentUpon>ProductManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

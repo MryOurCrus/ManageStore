@@ -10,3 +10,16 @@ D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.exe
 D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.pdb
 D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.ChangePass.resources
 D:\BTL_CNPM\CongNghePM\Code\obj\Debug\Code.Home.resources
+D:\GITHUB\Code\bin\Debug\Code.exe.config
+D:\GITHUB\Code\bin\Debug\Code.exe
+D:\GITHUB\Code\bin\Debug\Code.pdb
+D:\GITHUB\Code\obj\Debug\Code.csprojAssemblyReference.cache
+D:\GITHUB\Code\obj\Debug\Code.ChangePass.resources
+D:\GITHUB\Code\obj\Debug\Code.Home.resources
+D:\GITHUB\Code\obj\Debug\Code.Login.resources
+D:\GITHUB\Code\obj\Debug\Code.Properties.Resources.resources
+D:\GITHUB\Code\obj\Debug\Code.csproj.GenerateResource.cache
+D:\GITHUB\Code\obj\Debug\Code.csproj.CoreCompileInputs.cache
+D:\GITHUB\Code\obj\Debug\Code.exe
+D:\GITHUB\Code\obj\Debug\Code.pdb
+D:\GITHUB\Code\obj\Debug\Code.ProductManage.resources

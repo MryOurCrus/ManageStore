@@ -24,6 +24,11 @@ namespace Code
             frm.Show();
         }
 
-        
+        private void hàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ProductManage frm = new ProductManage();
+            frm.Show();
+        }
     }
 }

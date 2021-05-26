@@ -31,9 +31,9 @@ namespace Code
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userList = new System.Windows.Forms.ToolStripMenuItem();
             this.changePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.logout = new System.Windows.Forms.ToolStripMenuItem();
-            this.userList = new System.Windows.Forms.ToolStripMenuItem();
             this.hàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,6 +67,12 @@ namespace Code
             this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài Khoản";
             // 
+            // userList
+            // 
+            this.userList.Name = "userList";
+            this.userList.Size = new System.Drawing.Size(181, 22);
+            this.userList.Text = "Danh sách tài khoản";
+            // 
             // changePassword
             // 
             this.changePassword.Name = "changePassword";
@@ -80,17 +86,12 @@ namespace Code
             this.logout.Size = new System.Drawing.Size(181, 22);
             this.logout.Text = "Đăng xuất";
             // 
-            // userList
-            // 
-            this.userList.Name = "userList";
-            this.userList.Size = new System.Drawing.Size(181, 22);
-            this.userList.Text = "Danh sách tài khoản";
-            // 
             // hàngHóaToolStripMenuItem
             // 
             this.hàngHóaToolStripMenuItem.Name = "hàngHóaToolStripMenuItem";
             this.hàngHóaToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.hàngHóaToolStripMenuItem.Text = "Sản Phẩm";
+            this.hàngHóaToolStripMenuItem.Click += new System.EventHandler(this.hàngHóaToolStripMenuItem_Click);
             // 
             // kháchHàngToolStripMenuItem
             // 
