@@ -136,6 +136,18 @@ insert into nhapkho values ('sp19',N'bánh đa','100','200000','10/19/2019','10'
 
 
 --------------------------------------------------------------------------------------------------------------
-
-
+-- hàm tính tổng tiền hóa đơn
+Create trigger in_trigger_HD
+on hoadonra
+for insert
+as if((SELECT masp from inserted) is not null)
+begin
+update hoadonra
+SET thanhtien = (Select sanpham.giaban * I.soluong) from (select masp,soluong from inserted) as I,sanpham) 
+				where sanpham.masp = I.masp
+UPDATE hoadonra
+SET ngayban = GETDATE()
+	from hoadonra,(select masp from inserted) as I
+	where hoadonra.masp= I.masp
+end
 

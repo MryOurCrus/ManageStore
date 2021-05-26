@@ -30,5 +30,12 @@ namespace Code
             ProductManage frm = new ProductManage();
             frm.Show();
         }
+
+        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Bill frm = new Bill();
+            frm.Show();
+        }
     }
 }

@@ -40,6 +40,9 @@ namespace Code
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tb_findname = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +59,7 @@ namespace Code
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(596, 117);
+            this.button4.Location = new System.Drawing.Point(654, 8);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 23);
             this.button4.TabIndex = 31;
@@ -66,7 +69,7 @@ namespace Code
             // 
             // bt_delete
             // 
-            this.bt_delete.Location = new System.Drawing.Point(464, 84);
+            this.bt_delete.Location = new System.Drawing.Point(340, 84);
             this.bt_delete.Name = "bt_delete";
             this.bt_delete.Size = new System.Drawing.Size(75, 23);
             this.bt_delete.TabIndex = 30;
@@ -76,7 +79,7 @@ namespace Code
             // 
             // bt_update
             // 
-            this.bt_update.Location = new System.Drawing.Point(464, 44);
+            this.bt_update.Location = new System.Drawing.Point(340, 46);
             this.bt_update.Name = "bt_update";
             this.bt_update.Size = new System.Drawing.Size(75, 23);
             this.bt_update.TabIndex = 29;
@@ -86,7 +89,7 @@ namespace Code
             // 
             // bt_add
             // 
-            this.bt_add.Location = new System.Drawing.Point(464, 7);
+            this.bt_add.Location = new System.Drawing.Point(340, 8);
             this.bt_add.Name = "bt_add";
             this.bt_add.Size = new System.Drawing.Size(75, 23);
             this.bt_add.TabIndex = 28;
@@ -142,11 +145,40 @@ namespace Code
             this.label1.TabIndex = 22;
             this.label1.Text = "Mã Sản Phẩm";
             // 
+            // tb_findname
+            // 
+            this.tb_findname.Location = new System.Drawing.Point(153, 125);
+            this.tb_findname.Name = "tb_findname";
+            this.tb_findname.Size = new System.Drawing.Size(181, 20);
+            this.tb_findname.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 125);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 13);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Tên Sản Phẩm cần tìm";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(340, 122);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ProductManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tb_findname);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.bt_delete);
@@ -179,5 +211,8 @@ namespace Code
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tb_findname;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

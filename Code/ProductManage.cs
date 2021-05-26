@@ -74,5 +74,14 @@ namespace Code
             tb_tensp.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             tb_giaban.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cmd.CommandText = "SELECT * From sanpham where sanpham.tensp = N'"+tb_findname.Text;
+            cmd.Connection = conn;
+            da.SelectCommand = cmd; table.Clear();
+            da.Fill(table);
+            dataGridView1.DataSource = table;
+        }
     }
 }
