@@ -16,6 +16,12 @@ namespace Code
         public ProductManage()
         {
             InitializeComponent();
+            HienThi();
+            if (Login.permission != "admin") {
+                bt_add.Enabled = false;
+                bt_delete.Enabled = false;
+                bt_update.Enabled = false;
+            }
         }
         SqlConnection conn = new SqlConnection(StringConn.connectionString);
         SqlCommand cmd = new SqlCommand();

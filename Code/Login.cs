@@ -18,7 +18,7 @@ namespace Code
         }
         Connections conn = new Connections();
 
-
+        public static string permission = "";
 
         private void btLogin_Click(object sender, EventArgs e)
         {
@@ -32,8 +32,9 @@ namespace Code
 
                 if (conn.XemDL(sql).Rows.Count != 0)
                 {
-                    //Login.quyen = Convert.ToInt32(conn.XemDL("select maquyen from taikhoan where tentk='" + ten + "' and mk='" + mk + "' ").Rows[0][0].ToString().Trim());
-                    //this.Hide();
+                    Login.permission = Convert.ToString(conn.XemDL("select quyen from taikhoan where tentk='" + ten + "' and mk='" + mk + "' ").Rows[0][0].ToString().Trim());
+                    MessageBox.Show(Login.permission);
+                    this.Hide();
                     Home frm = new Home();
                     frm.Show();
                 }
