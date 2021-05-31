@@ -2,7 +2,7 @@
 on primary
 (
 	Name = BTL_QLDAN_DATA,
-	Filename = 'D:\BTL_CNPM\BTL_QLDAN_data.mdf',
+	Filename = 'D:\C#_Clone\BTL_QLDAN_data.mdf',
 	Size = 10MB,
 	MaxSize = UNLIMITED,
 	Filegrowth = 5MB
@@ -10,7 +10,7 @@ on primary
 Log on
 (
 	Name = BTL_QLDAN_LOG,
-	Filename = 'D:\BTL_CNPM\BTL_QLDAN_log.ldf',
+	Filename = 'D:\C#_Clone\BTL_QLDAN_log.ldf',
 	Size = 5MB,
 	MaxSize = UNLIMITED,
 	FileGrowth=1MB
@@ -47,10 +47,10 @@ mahdr varchar(10) foreign key (mahdr) references hoadonra(mahdr))  --mã hóa đ
 
 create table taikhoan
 (
-	tentk nvarchar(50),
+	tentk nvarchar(50) primary key,
 	mk nvarchar(50),
 	quyen nvarchar(50),
-	manv varchar(10)
+	manv varchar(10) foreign key (manv) references nhanvien(manv)
 )
 
 insert into nhanvien values ('NV01',N'vũ mạnh dũng','12/12/1999',N'hà nội','Nam','0123456789')
@@ -75,7 +75,7 @@ insert into nhanvien values ('NV19',N'nguyễn anh đức','02/09/1994',N'bắc 
 insert into nhanvien values ('NV20',N'bùi thị hoa','01/08/1993',N'bắc giang',N'Nữ','012399783')
 insert into nhanvien values ('NV21',N'chu việt hoàng','06/30/1997',N'hưng yên','Nam','012354287')
 insert into nhanvien values ('NV22',N'nguyễn thị ánh viên','05/27/1996',N'hà nội',N'Nữ','012300437')
-insert into nhanvien values ('NV23',N'lê tú vi','12/03/1999',N'hưng yên',N'Nữ','012874377')
+insert into nhanvien values ('admin',N'lê tú vi','12/03/1999',N'hưng yên',N'Nữ','012874377')
 
 insert into sanpham values ('sp01',N'gà chiên','20000')
 insert into sanpham values ('sp02',N'xúc xích rán','10000')
@@ -122,3 +122,8 @@ SET ngayban = GETDATE()
 	where hoadonra.masp= I.masp
 end
 
+
+ALTER TABLE hoadonra
+ADD CONSTRAINT fk_masp
+  FOREIGN KEY (masp)
+  REFERENCES sanpham (masp);

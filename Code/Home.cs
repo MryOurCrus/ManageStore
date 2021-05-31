@@ -43,5 +43,12 @@ namespace Code
 
             frm.Show();
         }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            Form frm = new Login();
+            this.Close();
+            frm.Show();
+        }
     }
 }

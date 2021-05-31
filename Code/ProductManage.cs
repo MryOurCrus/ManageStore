@@ -21,6 +21,9 @@ namespace Code
                 bt_add.Enabled = false;
                 bt_delete.Enabled = false;
                 bt_update.Enabled = false;
+                tb_masp.Enabled = false;
+                tb_tensp.Enabled = false;
+                tb_giaban.Enabled = false;
             }
         }
         Connections conn = new Connections();
@@ -86,7 +89,7 @@ namespace Code
             //cmd.Connection = conn;
             //da.SelectCommand = cmd; table.Clear();
             //da.Fill(table);
-            dataGridView1.DataSource = conn.XemDL("SELECT * From sanpham where sanpham.tensp = N'" + tb_findname.Text);
+            dataGridView1.DataSource = conn.XemDL("SELECT * From sanpham where sanpham.tensp = N'" + tb_findname.Text+"'");
         }
     }
 }

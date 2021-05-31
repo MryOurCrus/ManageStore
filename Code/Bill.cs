@@ -27,10 +27,12 @@ namespace Code
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
             //cmd.CommandText = ;
             //cmd.Connection = conn;
             //cmd.ExecuteNonQuery();
-            try{
+            try
+            {
                 conn.ThucThiDl("INSERT INTO hoadonra(mahdr,masp,soluong,thanhtien,ngayban,manv)   VALUES(N'" + tb_MHD.Text + "', N'" + cb_MSP.Text + "'," + nud_SL.Value + "," + txtPrice.Text + " ,'" + dateTimePicker3.Value.ToShortDateString() + "' , N'" + txtNV.Text + "')");
                 conn.ThucThiDl("INSERT INTO khachhang(makh,tenkh,diachi,sdt,mahdr)  VALUES('" + tb_MHD.Text + "', N'" + txtKhach.Text + "',N'" + txtAddr.Text + "','" + txtPhone.Text + "' ,'" + tb_MHD.Text + "')");
                 //MessageBox.Show("Thêm thành công");
@@ -39,12 +41,12 @@ namespace Code
                 prbill.Show();
                 HienThi();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            
-            
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
