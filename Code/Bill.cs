@@ -33,11 +33,11 @@ namespace Code
             //cmd.ExecuteNonQuery();
             try
             {
-                conn.ThucThiDl("INSERT INTO hoadonra(mahdr,masp,soluong,thanhtien,ngayban,manv)   VALUES(N'" + tb_MHD.Text + "', N'" + cb_MSP.Text + "'," + nud_SL.Value + "," + txtPrice.Text + " ,'" + dateTimePicker3.Value.ToShortDateString() + "' , N'" + txtNV.Text + "')");
+                conn.ThucThiDl("INSERT INTO hoadonra(mahdr,masp,soluong,thanhtien,ngayban,manv)   VALUES(N'" + tb_MHD.Text + "', N'" + tbTong.Text + "'," + nud_SL.Value + "," + txtTongTien.Text + " ,'" + dateTimePicker3.Value.ToShortDateString() + "' , N'" + txtNV.Text + "')");
                 conn.ThucThiDl("INSERT INTO khachhang(makh,tenkh,diachi,sdt,mahdr)  VALUES('" + tb_MHD.Text + "', N'" + txtKhach.Text + "',N'" + txtAddr.Text + "','" + txtPhone.Text + "' ,'" + tb_MHD.Text + "')");
                 //MessageBox.Show("Thêm thành công");
                 PrintBill prbill = new PrintBill();
-                prbill.printBill(txtKhach.Text, txtPhone.Text, tb_MHD.Text, cb_MSP.Text, nud_SL.Value.ToString(), dateTimePicker3.Value.ToShortDateString(), txtPrice.Text);
+                prbill.printBill(txtKhach.Text, txtPhone.Text, tb_MHD.Text, tbTong.Text, dateTimePicker3.Value.ToShortDateString(), txtTongTien.Text);
                 prbill.Show();
                 HienThi();
             }
@@ -78,6 +78,15 @@ namespace Code
         private void nud_SL_ValueChanged(object sender, EventArgs e)
         {
             txtPrice.Text = Convert.ToString(Convert.ToInt32(conn.XemDL("select giaban from sanpham where masp='" + cb_MSP.Text + "'").Rows[0][0]) * nud_SL.Value);
+        }
+        string listSP="";
+        int tongtien = 0;
+        private void btThemSP_Click(object sender, EventArgs e)
+        {
+            listSP = listSP + "," + cb_MSP.Text;
+            tbTong.Text = listSP;
+            tongtien = tongtien + Convert.ToInt32(txtPrice.Text);
+            txtTongTien.Text = Convert.ToString(tongtien);
         }
     }
 }

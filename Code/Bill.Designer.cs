@@ -55,6 +55,9 @@ namespace Code
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tbTong = new System.Windows.Forms.TextBox();
+            this.btThemSP = new System.Windows.Forms.Button();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -84,6 +87,9 @@ namespace Code
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtTongTien);
+            this.splitContainer1.Panel1.Controls.Add(this.btThemSP);
+            this.splitContainer1.Panel1.Controls.Add(this.tbTong);
             this.splitContainer1.Panel1.Controls.Add(this.txtNV);
             this.splitContainer1.Panel1.Controls.Add(this.label11);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker3);
@@ -128,7 +134,7 @@ namespace Code
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(377, 57);
+            this.label11.Location = new System.Drawing.Point(378, 18);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 17);
@@ -138,7 +144,7 @@ namespace Code
             // dateTimePicker3
             // 
             this.dateTimePicker3.CustomFormat = "MM/dd/yyyy";
-            this.dateTimePicker3.Location = new System.Drawing.Point(381, 82);
+            this.dateTimePicker3.Location = new System.Drawing.Point(381, 45);
             this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(163, 22);
@@ -240,7 +246,7 @@ namespace Code
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(404, 166);
+            this.button1.Location = new System.Drawing.Point(408, 204);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
@@ -343,6 +349,32 @@ namespace Code
             this.dateTimePicker1.Size = new System.Drawing.Size(219, 22);
             this.dateTimePicker1.TabIndex = 0;
             // 
+            // tbTong
+            // 
+            this.tbTong.Location = new System.Drawing.Point(381, 116);
+            this.tbTong.Name = "tbTong";
+            this.tbTong.Size = new System.Drawing.Size(163, 22);
+            this.tbTong.TabIndex = 28;
+            // 
+            // btThemSP
+            // 
+            this.btThemSP.Location = new System.Drawing.Point(381, 80);
+            this.btThemSP.Name = "btThemSP";
+            this.btThemSP.Size = new System.Drawing.Size(75, 23);
+            this.btThemSP.TabIndex = 29;
+            this.btThemSP.Text = "Thêm SP";
+            this.btThemSP.UseVisualStyleBackColor = true;
+            this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);
+            // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(381, 169);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(163, 22);
+            this.txtTongTien.TabIndex = 30;
+            this.txtTongTien.Text = "0";
+            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -393,5 +425,8 @@ namespace Code
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.TextBox txtNV;
+        private System.Windows.Forms.TextBox tbTong;
+        private System.Windows.Forms.Button btThemSP;
+        private System.Windows.Forms.TextBox txtTongTien;
     }
 }
