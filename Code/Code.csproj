@@ -64,6 +64,12 @@
     <Compile Include="Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintBill.Designer.cs">
+      <DependentUpon>PrintBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintBill.resx">
+      <DependentUpon>PrintBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductManage.resx">
       <DependentUpon>ProductManage.cs</DependentUpon>

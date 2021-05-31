@@ -23,41 +23,46 @@ namespace Code
                 bt_update.Enabled = false;
             }
         }
-        SqlConnection conn = new SqlConnection(StringConn.connectionString);
-        SqlCommand cmd = new SqlCommand();
-        SqlDataAdapter da = new SqlDataAdapter();
-        DataTable table = new DataTable();
+        Connections conn = new Connections();
+        //SqlConnection conn = new SqlConnection(StringConn.connectionString);
+        //SqlCommand cmd = new SqlCommand();
+        //SqlDataAdapter da = new SqlDataAdapter();
+        //DataTable table = new DataTable();
         void HienThi()
         {
-            cmd.CommandText = "select * from sanpham";
-            cmd.Connection = conn;
-            da.SelectCommand = cmd;
-            table.Clear();
-            da.Fill(table);
-            dataGridView1.DataSource = table;
+            //cmd.CommandText = "select * from sanpham";
+            //cmd.Connection = conn;
+            //da.SelectCommand = cmd;
+            //table.Clear();
+            //da.Fill(table);
+            dataGridView1.DataSource = conn.XemDL("select * from sanpham");
         }
         private void bt_add_Click(object sender, EventArgs e)
         {
-            cmd.CommandText = "INSERT INTO sanpham VALUES(N'" + tb_masp.Text + "', N'" + tb_tensp.Text + "',N'" + tb_giaban.Text + "')";
-            cmd.Connection = conn;
-            cmd.ExecuteNonQuery();
+            //cmd.CommandText = "INSERT INTO sanpham VALUES(N'" + tb_masp.Text + "', N'" + tb_tensp.Text + "',N'" + tb_giaban.Text + "')";
+            //cmd.Connection = conn;
+            //cmd.ExecuteNonQuery();
+            conn.ThucThiDl("INSERT INTO sanpham VALUES(N'" + tb_masp.Text + "', N'" + tb_tensp.Text + "',N'" + tb_giaban.Text + "')");
             HienThi();
         }
 
         private void bt_update_Click(object sender, EventArgs e)
         {
-            cmd.CommandText = "UPDATE sanpham SET masp=N'" + tb_masp.Text + "',tensp=N'" + tb_tensp.Text + "',giaban=N'" + tb_giaban.Text +
-                "' WHERE masp= N'" + tb_masp.Text + "'";
-            cmd.Connection = conn;
-            cmd.ExecuteNonQuery();
+            //cmd.CommandText = "UPDATE sanpham SET masp=N'" + tb_masp.Text + "',tensp=N'" + tb_tensp.Text + "',giaban=N'" + tb_giaban.Text +
+            //    "' WHERE masp= N'" + tb_masp.Text + "'";
+            //cmd.Connection = conn;
+            //cmd.ExecuteNonQuery();
+            conn.ThucThiDl("UPDATE sanpham SET masp=N'" + tb_masp.Text + "',tensp=N'" + tb_tensp.Text + "',giaban=N'" + tb_giaban.Text +
+                "' WHERE masp= N'" + tb_masp.Text + "'");
             HienThi();
         }
 
         private void bt_delete_Click(object sender, EventArgs e)
         {
-            cmd.CommandText = "DELETE FROM sanpham WHERE masp=N'" + tb_masp.Text + "'";
-            cmd.Connection = conn;
-            cmd.ExecuteNonQuery();
+            //cmd.CommandText = "DELETE FROM sanpham WHERE masp=N'" + tb_masp.Text + "'";
+            //cmd.Connection = conn;
+            //cmd.ExecuteNonQuery();
+            conn.ThucThiDl("DELETE FROM sanpham WHERE masp=N'" + tb_masp.Text + "'");
             HienThi();
         }
 
@@ -77,11 +82,11 @@ namespace Code
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cmd.CommandText = "SELECT * From sanpham where sanpham.tensp = N'"+tb_findname.Text;
-            cmd.Connection = conn;
-            da.SelectCommand = cmd; table.Clear();
-            da.Fill(table);
-            dataGridView1.DataSource = table;
+            //cmd.CommandText = "SELECT * From sanpham where sanpham.tensp = N'"+tb_findname.Text;
+            //cmd.Connection = conn;
+            //da.SelectCommand = cmd; table.Clear();
+            //da.Fill(table);
+            dataGridView1.DataSource = conn.XemDL("SELECT * From sanpham where sanpham.tensp = N'" + tb_findname.Text);
         }
     }
 }

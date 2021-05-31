@@ -33,7 +33,10 @@ namespace Code
             try{
                 conn.ThucThiDl("INSERT INTO hoadonra(mahdr,masp,soluong,thanhtien,ngayban,manv)   VALUES(N'" + tb_MHD.Text + "', N'" + cb_MSP.Text + "'," + nud_SL.Value + "," + txtPrice.Text + " ,'" + dateTimePicker3.Value.ToShortDateString() + "' , N'" + txtNV.Text + "')");
                 conn.ThucThiDl("INSERT INTO khachhang(makh,tenkh,diachi,sdt,mahdr)  VALUES('" + tb_MHD.Text + "', N'" + txtKhach.Text + "',N'" + txtAddr.Text + "','" + txtPhone.Text + "' ,'" + tb_MHD.Text + "')");
-                MessageBox.Show("Thêm thành công");
+                //MessageBox.Show("Thêm thành công");
+                PrintBill prbill = new PrintBill();
+                prbill.printBill(txtKhach.Text, txtPhone.Text, tb_MHD.Text, cb_MSP.Text, nud_SL.Value.ToString(), dateTimePicker3.Value.ToShortDateString(), txtPrice.Text);
+                prbill.Show();
                 HienThi();
             }
             catch(Exception ex)

@@ -8,6 +8,6 @@ namespace Code
 {
     class StringConn
     {
-        public static string connectionString = @"Data Source=DESKTOP-93GFHQB\SQLEXPRESS;Initial Catalog=BTL_QuanLyCuaHangDoAnNhanh;Integrated Security=True";
+        public static string connectionString = @"Data Source=MSI\SQLEXPRESS;Initial Catalog=BTL_QuanLyCuaHangDoAnNhanh;Integrated Security=True";
     }
 }
