@@ -61,5 +61,10 @@ namespace Code
         {
             Application.Exit();
         }
+
+        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

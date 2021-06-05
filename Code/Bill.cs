@@ -30,11 +30,11 @@ namespace Code
         {
             try
             {
-                conn.ThucThiDl("INSERT INTO hoadonra(mahdr,masp,soluong,thanhtien,ngayban,manv)   VALUES(N'" + tb_MHD.Text + "', N'" + tbTong.Text + "'," + sl.ToString() + "," + txtTongTien.Text + " ,'" + dateTimePicker3.Value.ToShortDateString() + "' , N'" + txtNV.Text + "')");
+                conn.ThucThiDl("INSERT INTO hoadonra(mahdr,masp,soluong,thanhtien,ngayban,manv)   VALUES(N'" + tb_MHD.Text + "', N'" + tbTong.Text + "'," + txtSLSP.Text + "," + txtTongTien.Text + " ,'" + dateTimePicker3.Value.ToShortDateString() + "' , N'" + txtNV.Text + "')");
                 conn.ThucThiDl("INSERT INTO khachhang(makh,tenkh,diachi,sdt,mahdr)  VALUES('" + tb_MHD.Text + "', N'" + txtKhach.Text + "',N'" + txtAddr.Text + "','" + txtPhone.Text + "' ,'" + tb_MHD.Text + "')");
                 //MessageBox.Show("Thêm thành công");
                 PrintBill prbill = new PrintBill();
-                prbill.printBill(txtKhach.Text, txtPhone.Text, tb_MHD.Text, tbTong.Text, dateTimePicker3.Value.ToShortDateString(), txtTongTien.Text,sl.ToString());
+                prbill.printBill(txtKhach.Text, txtPhone.Text, tb_MHD.Text, tbTong.Text, dateTimePicker3.Value.ToShortDateString(), txtTongTien.Text, txtSLSP.Text);
                 prbill.Show();
                 //HienThi();
             }
@@ -55,21 +55,16 @@ namespace Code
         {
             txtPrice.Text = Convert.ToString(Convert.ToInt32(conn.XemDL("select giaban from sanpham where masp='" + cb_MSP.Text + "'").Rows[0][0]) * nud_SL.Value);
         }
-        //string listSP="";
-        //int tongtien = 0;
+
         int sl = 0;
         private void btThemSP_Click(object sender, EventArgs e)
         {
-            //listSP = listSP + "," + cb_MSP.Text;
-            //tbTong.Text = listSP;
-            //sl = sl + Convert.ToInt32(nud_SL.Value);
-            //tongtien = tongtien + Convert.ToInt32(txtPrice.Text);
-            //txtTongTien.Text = Convert.ToString(tongtien);
             dataGridView1.Rows.Add(cb_MSP.Text, nud_SL.Value, txtPrice.Text);
             sl++;
             if (sl != 0) {
-                tbTong.Text = tinhTongSLDGV().ToString();
+                tbTong.Text = DSSLDGV().ToString();
                 txtTongTien.Text = tinhTongTienDGV().ToString();
+                txtSLSP.Text = tinhTongSLDGV().ToString();
             };
             
 
@@ -91,8 +86,9 @@ namespace Code
                 sl--;
                 if (sl != 0)
                 {
-                    tbTong.Text = tinhTongSLDGV().ToString();
+                    tbTong.Text = DSSLDGV().ToString();
                     txtTongTien.Text = tinhTongTienDGV().ToString();
+                    txtSLSP.Text = tinhTongSLDGV().ToString();
                 };
             }
             catch (Exception ex) {
@@ -101,9 +97,19 @@ namespace Code
             };
             
         }
-        int tinhTongTienDGV()
+        int tinhTongSLDGV()
         {
             int tong = 0;
+            for (int i = 0; i < sl; i++)
+            {
+                tong += Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value);
+            };
+
+            return tong;
+        }
+        int tinhTongTienDGV()
+        {
+            int tong=0;
             for (int i=0; i<sl; i++)
             {
                 tong+=Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value);
@@ -111,15 +117,15 @@ namespace Code
             
             return tong;
         }
-        int tinhTongSLDGV()
+        string DSSLDGV()
         {
-            int tong = 0;
+            string sosp="";
             for (int i = 0; i < sl; i++)
             {
-                tong += Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value);
+                sosp = sosp + Convert.ToString(dataGridView1.Rows[i].Cells[0].Value)+",";
             };
 
-            return tong;
+            return sosp;
         }
         int index = 0;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
