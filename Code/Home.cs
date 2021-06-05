@@ -32,7 +32,7 @@ namespace Code
 
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new Customer();
+            Form frm = new Employee();
 
             frm.Show();
         }
@@ -65,6 +65,12 @@ namespace Code
         private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void kháchHàngToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form frm = new Customers();
+            frm.Show();
         }
     }
 }

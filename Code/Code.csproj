@@ -58,17 +58,23 @@
     <Compile Include="ChangePass.Designer.cs">
       <DependentUpon>ChangePass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
+    <Compile Include="Employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="BillManage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BillManage.Designer.cs">
       <DependentUpon>BillManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintBill.cs">
       <SubType>Form</SubType>
@@ -104,8 +110,11 @@
     <EmbeddedResource Include="ChangePass.resx">
       <DependentUpon>ChangePass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BillManage.resx">
       <DependentUpon>BillManage.cs</DependentUpon>

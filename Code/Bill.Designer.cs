@@ -53,13 +53,13 @@ namespace Code
             this.cb_MSP = new System.Windows.Forms.ComboBox();
             this.tb_MHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtSLSP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbTong = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtSLSP = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -341,6 +341,24 @@ namespace Code
             this.label1.TabIndex = 9;
             this.label1.Text = "Mã Hóa Đơn";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(89, 128);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(165, 17);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Tổng số lượng sản phẩm";
+            // 
+            // txtSLSP
+            // 
+            this.txtSLSP.Location = new System.Drawing.Point(281, 125);
+            this.txtSLSP.Name = "txtSLSP";
+            this.txtSLSP.ReadOnly = true;
+            this.txtSLSP.Size = new System.Drawing.Size(163, 22);
+            this.txtSLSP.TabIndex = 32;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -389,24 +407,6 @@ namespace Code
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(89, 128);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 17);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Tổng số lượng sản phẩm";
-            // 
-            // txtSLSP
-            // 
-            this.txtSLSP.Location = new System.Drawing.Point(281, 125);
-            this.txtSLSP.Name = "txtSLSP";
-            this.txtSLSP.ReadOnly = true;
-            this.txtSLSP.Size = new System.Drawing.Size(163, 22);
-            this.txtSLSP.TabIndex = 32;
-            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -417,6 +417,7 @@ namespace Code
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Bill";
             this.Text = "Bill";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Bill_FormClosing);
             this.Load += new System.EventHandler(this.Bill_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);

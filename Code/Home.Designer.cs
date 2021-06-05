@@ -41,6 +41,7 @@ namespace Code
             this.xemHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.kháchHàngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@ namespace Code
             this.tàiKhoảnToolStripMenuItem,
             this.hàngHóaToolStripMenuItem,
             this.kháchHàngToolStripMenuItem,
+            this.kháchHàngToolStripMenuItem1,
             this.hóaĐơnToolStripMenuItem,
             this.thốngKêToolStripMenuItem,
             this.thoátToolStripMenuItem1});
@@ -100,8 +102,8 @@ namespace Code
             // kháchHàngToolStripMenuItem
             // 
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
-            this.kháchHàngToolStripMenuItem.Text = "Khách Hàng";
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.kháchHàngToolStripMenuItem.Text = "Nhân Viên";
             this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
             // 
             // hóaĐơnToolStripMenuItem
@@ -140,6 +142,13 @@ namespace Code
             this.thoátToolStripMenuItem1.Text = "Thoát";
             this.thoátToolStripMenuItem1.Click += new System.EventHandler(this.thoátToolStripMenuItem1_Click);
             // 
+            // kháchHàngToolStripMenuItem1
+            // 
+            this.kháchHàngToolStripMenuItem1.Name = "kháchHàngToolStripMenuItem1";
+            this.kháchHàngToolStripMenuItem1.Size = new System.Drawing.Size(103, 24);
+            this.kháchHàngToolStripMenuItem1.Text = "Khách Hàng";
+            this.kháchHàngToolStripMenuItem1.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem1_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -172,5 +181,6 @@ namespace Code
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tạoHóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemHóaĐơnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kháchHàngToolStripMenuItem1;
     }
 }

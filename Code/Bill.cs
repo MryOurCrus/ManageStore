@@ -142,5 +142,10 @@ namespace Code
             txtNV.Text = Login.nameNV;
             HienThi();
         }
+
+        private void Bill_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Ngatketnoi();
+        }
     }
 }

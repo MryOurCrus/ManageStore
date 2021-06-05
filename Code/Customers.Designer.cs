@@ -1,7 +1,7 @@
 ﻿
 namespace Code
 {
-    partial class Customer
+    partial class Customers
     {
         /// <summary>
         /// Required designer variable.
@@ -36,24 +36,22 @@ namespace Code
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 16);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(940, 335);
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(775, 359);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Customer
+            // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 368);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Customer";
-            this.Text = "Khách hàng";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Customer_FormClosing);
-            this.Load += new System.EventHandler(this.Customer_Load);
+            this.Name = "Customers";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

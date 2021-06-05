@@ -52,7 +52,7 @@ namespace Code
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 203);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1067, 351);
@@ -62,7 +62,7 @@ namespace Code
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(872, 10);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(156, 28);
             this.button4.TabIndex = 31;
@@ -72,8 +72,8 @@ namespace Code
             // 
             // bt_delete
             // 
-            this.bt_delete.Location = new System.Drawing.Point(453, 103);
-            this.bt_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_delete.Location = new System.Drawing.Point(453, 102);
+            this.bt_delete.Margin = new System.Windows.Forms.Padding(4);
             this.bt_delete.Name = "bt_delete";
             this.bt_delete.Size = new System.Drawing.Size(100, 28);
             this.bt_delete.TabIndex = 30;
@@ -83,8 +83,8 @@ namespace Code
             // 
             // bt_update
             // 
-            this.bt_update.Location = new System.Drawing.Point(453, 57);
-            this.bt_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_update.Location = new System.Drawing.Point(453, 56);
+            this.bt_update.Margin = new System.Windows.Forms.Padding(4);
             this.bt_update.Name = "bt_update";
             this.bt_update.Size = new System.Drawing.Size(100, 28);
             this.bt_update.TabIndex = 29;
@@ -95,7 +95,7 @@ namespace Code
             // bt_add
             // 
             this.bt_add.Location = new System.Drawing.Point(453, 10);
-            this.bt_add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_add.Margin = new System.Windows.Forms.Padding(4);
             this.bt_add.Name = "bt_add";
             this.bt_add.Size = new System.Drawing.Size(100, 28);
             this.bt_add.TabIndex = 28;
@@ -105,16 +105,16 @@ namespace Code
             // 
             // tb_giaban
             // 
-            this.tb_giaban.Location = new System.Drawing.Point(204, 103);
-            this.tb_giaban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_giaban.Location = new System.Drawing.Point(204, 106);
+            this.tb_giaban.Margin = new System.Windows.Forms.Padding(4);
             this.tb_giaban.Name = "tb_giaban";
             this.tb_giaban.Size = new System.Drawing.Size(240, 22);
             this.tb_giaban.TabIndex = 27;
             // 
             // tb_tensp
             // 
-            this.tb_tensp.Location = new System.Drawing.Point(204, 60);
-            this.tb_tensp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_tensp.Location = new System.Drawing.Point(204, 59);
+            this.tb_tensp.Margin = new System.Windows.Forms.Padding(4);
             this.tb_tensp.Name = "tb_tensp";
             this.tb_tensp.Size = new System.Drawing.Size(240, 22);
             this.tb_tensp.TabIndex = 26;
@@ -122,7 +122,7 @@ namespace Code
             // tb_masp
             // 
             this.tb_masp.Location = new System.Drawing.Point(204, 12);
-            this.tb_masp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_masp.Margin = new System.Windows.Forms.Padding(4);
             this.tb_masp.Name = "tb_masp";
             this.tb_masp.Size = new System.Drawing.Size(240, 22);
             this.tb_masp.TabIndex = 25;
@@ -130,7 +130,7 @@ namespace Code
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 103);
+            this.label3.Location = new System.Drawing.Point(16, 107);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 17);
@@ -140,7 +140,7 @@ namespace Code
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 60);
+            this.label2.Location = new System.Drawing.Point(16, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 17);
@@ -150,7 +150,7 @@ namespace Code
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 12);
+            this.label1.Location = new System.Drawing.Point(16, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 17);
@@ -159,8 +159,8 @@ namespace Code
             // 
             // tb_findname
             // 
-            this.tb_findname.Location = new System.Drawing.Point(204, 154);
-            this.tb_findname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_findname.Location = new System.Drawing.Point(204, 153);
+            this.tb_findname.Margin = new System.Windows.Forms.Padding(4);
             this.tb_findname.Name = "tb_findname";
             this.tb_findname.Size = new System.Drawing.Size(240, 22);
             this.tb_findname.TabIndex = 33;
@@ -168,7 +168,7 @@ namespace Code
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 154);
+            this.label4.Location = new System.Drawing.Point(16, 153);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 17);
@@ -177,8 +177,8 @@ namespace Code
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(453, 150);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(453, 148);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 35;
@@ -205,7 +205,7 @@ namespace Code
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProductManage";
             this.Text = "ProductManage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProductManage_FormClosing);

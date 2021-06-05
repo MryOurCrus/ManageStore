@@ -32,7 +32,6 @@ D:\C#_Clone\ManageStore\Code\bin\Debug\Code.pdb
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.csproj.AssemblyReference.cache
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.Bill.resources
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.ChangePass.resources
-D:\C#_Clone\ManageStore\Code\obj\Debug\Code.Customer.resources
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.Home.resources
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.Login.resources
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.ProductManage.resources
@@ -43,3 +42,5 @@ D:\C#_Clone\ManageStore\Code\obj\Debug\Code.exe
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.pdb
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.PrintBill.resources
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.BillManage.resources
+D:\C#_Clone\ManageStore\Code\obj\Debug\Code.Employee.resources
+D:\C#_Clone\ManageStore\Code\obj\Debug\Code.Customers.resources
