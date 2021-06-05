@@ -16,7 +16,7 @@ namespace Code
         {
             InitializeComponent();
         }
-        public void printBill(string tkh, string sdt, string mahd, string masp, string date, string price)
+        public void printBill(string tkh, string sdt, string mahd, string masp, string date, string price,string sl)
         {
             label9.Text = tkh;
             label10.Text = sdt;
@@ -24,6 +24,7 @@ namespace Code
             label12.Text = masp;
             label14.Text = date;
             label15.Text = price;
+            label7.Text = sl;
         }
     }
 }

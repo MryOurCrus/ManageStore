@@ -30,7 +30,12 @@ namespace Code
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnDeleteItem = new System.Windows.Forms.Button();
+            this.btThemSP = new System.Windows.Forms.Button();
             this.txtNV = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
@@ -44,20 +49,15 @@ namespace Code
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.nud_SL = new System.Windows.Forms.NumericUpDown();
             this.cb_MSP = new System.Windows.Forms.ComboBox();
             this.tb_MHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.tbTong = new System.Windows.Forms.TextBox();
-            this.btThemSP = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbTong = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -70,26 +70,54 @@ namespace Code
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MASP,
+            this.SoLuong,
+            this.ThanhTien});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 255);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 267);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1067, 299);
+            this.dataGridView1.Size = new System.Drawing.Size(1126, 299);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // MASP
+            // 
+            this.MASP.HeaderText = "MASP";
+            this.MASP.MinimumWidth = 6;
+            this.MASP.Name = "MASP";
+            this.MASP.ReadOnly = true;
+            this.MASP.Width = 125;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "SoLuong";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            this.SoLuong.Width = 125;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "ThanhTien";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            this.ThanhTien.Width = 125;
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.txtTongTien);
+            this.splitContainer1.Panel1.Controls.Add(this.btnDeleteItem);
             this.splitContainer1.Panel1.Controls.Add(this.btThemSP);
-            this.splitContainer1.Panel1.Controls.Add(this.tbTong);
             this.splitContainer1.Panel1.Controls.Add(this.txtNV);
             this.splitContainer1.Panel1.Controls.Add(this.label11);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker3);
@@ -103,7 +131,6 @@ namespace Code
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.nud_SL);
             this.splitContainer1.Panel1.Controls.Add(this.cb_MSP);
             this.splitContainer1.Panel1.Controls.Add(this.tb_MHD);
@@ -111,21 +138,40 @@ namespace Code
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.label7);
             this.splitContainer1.Panel2.Controls.Add(this.label6);
-            this.splitContainer1.Panel2.Controls.Add(this.dateTimePicker2);
-            this.splitContainer1.Panel2.Controls.Add(this.button2);
+            this.splitContainer1.Panel2.Controls.Add(this.txtTongTien);
             this.splitContainer1.Panel2.Controls.Add(this.label5);
-            this.splitContainer1.Panel2.Controls.Add(this.dateTimePicker1);
-            this.splitContainer1.Size = new System.Drawing.Size(1067, 255);
-            this.splitContainer1.SplitterDistance = 549;
+            this.splitContainer1.Panel2.Controls.Add(this.tbTong);
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Size = new System.Drawing.Size(1126, 267);
+            this.splitContainer1.SplitterDistance = 579;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 10;
+            // 
+            // btnDeleteItem
+            // 
+            this.btnDeleteItem.Location = new System.Drawing.Point(395, 204);
+            this.btnDeleteItem.Name = "btnDeleteItem";
+            this.btnDeleteItem.Size = new System.Drawing.Size(123, 23);
+            this.btnDeleteItem.TabIndex = 30;
+            this.btnDeleteItem.Text = "Xóa sản phẩm";
+            this.btnDeleteItem.UseVisualStyleBackColor = true;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btThemSP
+            // 
+            this.btThemSP.Location = new System.Drawing.Point(421, 150);
+            this.btThemSP.Name = "btThemSP";
+            this.btThemSP.Size = new System.Drawing.Size(75, 23);
+            this.btThemSP.TabIndex = 29;
+            this.btThemSP.Text = "Thêm SP";
+            this.btThemSP.UseVisualStyleBackColor = true;
+            this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);
             // 
             // txtNV
             // 
             this.txtNV.Location = new System.Drawing.Point(149, 114);
-            this.txtNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtNV.Name = "txtNV";
             this.txtNV.ReadOnly = true;
             this.txtNV.Size = new System.Drawing.Size(207, 22);
@@ -145,7 +191,7 @@ namespace Code
             // 
             this.dateTimePicker3.CustomFormat = "MM/dd/yyyy";
             this.dateTimePicker3.Location = new System.Drawing.Point(381, 45);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(163, 22);
             this.dateTimePicker3.TabIndex = 25;
@@ -184,7 +230,7 @@ namespace Code
             // txtAddr
             // 
             this.txtAddr.Location = new System.Drawing.Point(149, 210);
-            this.txtAddr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAddr.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddr.Name = "txtAddr";
             this.txtAddr.Size = new System.Drawing.Size(207, 22);
             this.txtAddr.TabIndex = 21;
@@ -192,7 +238,7 @@ namespace Code
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(149, 178);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(207, 22);
             this.txtPhone.TabIndex = 20;
@@ -200,7 +246,7 @@ namespace Code
             // txtKhach
             // 
             this.txtKhach.Location = new System.Drawing.Point(149, 146);
-            this.txtKhach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKhach.Margin = new System.Windows.Forms.Padding(4);
             this.txtKhach.Name = "txtKhach";
             this.txtKhach.Size = new System.Drawing.Size(207, 22);
             this.txtKhach.TabIndex = 19;
@@ -208,7 +254,7 @@ namespace Code
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(220, 81);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
             this.txtPrice.Size = new System.Drawing.Size(136, 22);
@@ -244,21 +290,10 @@ namespace Code
             this.label2.TabIndex = 14;
             this.label2.Text = "Mã Sản phẩm";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(408, 204);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Tạo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // nud_SL
             // 
             this.nud_SL.Location = new System.Drawing.Point(149, 80);
-            this.nud_SL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nud_SL.Margin = new System.Windows.Forms.Padding(4);
             this.nud_SL.Name = "nud_SL";
             this.nud_SL.Size = new System.Drawing.Size(63, 22);
             this.nud_SL.TabIndex = 12;
@@ -268,7 +303,7 @@ namespace Code
             // 
             this.cb_MSP.FormattingEnabled = true;
             this.cb_MSP.Location = new System.Drawing.Point(149, 47);
-            this.cb_MSP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_MSP.Margin = new System.Windows.Forms.Padding(4);
             this.cb_MSP.Name = "cb_MSP";
             this.cb_MSP.Size = new System.Drawing.Size(207, 24);
             this.cb_MSP.TabIndex = 11;
@@ -277,7 +312,7 @@ namespace Code
             // tb_MHD
             // 
             this.tb_MHD.Location = new System.Drawing.Point(149, 15);
-            this.tb_MHD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_MHD.Margin = new System.Windows.Forms.Padding(4);
             this.tb_MHD.Name = "tb_MHD";
             this.tb_MHD.Size = new System.Drawing.Size(207, 22);
             this.tb_MHD.TabIndex = 10;
@@ -292,97 +327,61 @@ namespace Code
             this.label1.TabIndex = 9;
             this.label1.Text = "Mã Hóa Đơn";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 123);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 17);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Đến";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 86);
+            this.label6.Location = new System.Drawing.Point(89, 80);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 17);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Từ";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(113, 114);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(219, 22);
-            this.dateTimePicker2.TabIndex = 3;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(165, 169);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Tìm kiếm";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(184, 47);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Tìm kiếm";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(113, 79);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(219, 22);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
-            // tbTong
-            // 
-            this.tbTong.Location = new System.Drawing.Point(381, 116);
-            this.tbTong.Name = "tbTong";
-            this.tbTong.Size = new System.Drawing.Size(163, 22);
-            this.tbTong.TabIndex = 28;
-            // 
-            // btThemSP
-            // 
-            this.btThemSP.Location = new System.Drawing.Point(381, 80);
-            this.btThemSP.Name = "btThemSP";
-            this.btThemSP.Size = new System.Drawing.Size(75, 23);
-            this.btThemSP.TabIndex = 29;
-            this.btThemSP.Text = "Thêm SP";
-            this.btThemSP.UseVisualStyleBackColor = true;
-            this.btThemSP.Click += new System.EventHandler(this.btThemSP_Click);
+            this.label6.Size = new System.Drawing.Size(68, 17);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Tổng tiền";
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(381, 169);
+            this.txtTongTien.Location = new System.Drawing.Point(281, 77);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.ReadOnly = true;
             this.txtTongTien.Size = new System.Drawing.Size(163, 22);
             this.txtTongTien.TabIndex = 30;
             this.txtTongTien.Text = "0";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(89, 33);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(165, 17);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Tổng số lượng sản phẩm";
+            // 
+            // tbTong
+            // 
+            this.tbTong.Location = new System.Drawing.Point(281, 30);
+            this.tbTong.Name = "tbTong";
+            this.tbTong.Size = new System.Drawing.Size(163, 22);
+            this.tbTong.TabIndex = 28;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(219, 167);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 28);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Lưu Hóa Đơn";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1126, 566);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Bill";
             this.Text = "Bill";
             this.Load += new System.EventHandler(this.Bill_Load);
@@ -409,12 +408,6 @@ namespace Code
         private System.Windows.Forms.ComboBox cb_MSP;
         private System.Windows.Forms.TextBox tb_MHD;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -428,5 +421,11 @@ namespace Code
         private System.Windows.Forms.TextBox tbTong;
         private System.Windows.Forms.Button btThemSP;
         private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnDeleteItem;
     }
 }

@@ -42,3 +42,4 @@ D:\C#_Clone\ManageStore\Code\obj\Debug\Code.csproj.CoreCompileInputs.cache
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.exe
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.pdb
 D:\C#_Clone\ManageStore\Code\obj\Debug\Code.PrintBill.resources
+D:\C#_Clone\ManageStore\Code\obj\Debug\Code.BillManage.resources

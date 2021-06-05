@@ -30,13 +30,6 @@ namespace Code
             frm.Show();
         }
 
-        private void hóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            Bill frm = new Bill();
-            frm.Show();
-        }
-
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new Customer();
@@ -49,6 +42,24 @@ namespace Code
             Form frm = new Login();
             this.Close();
             frm.Show();
+        }
+
+        private void xemHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new BillManage();
+            frm.Show();
+        }
+
+        private void tạoHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new Bill();
+            frm.Show();
+        }
+
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
