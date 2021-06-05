@@ -15,6 +15,18 @@ namespace Code
         public Employee()
         {
             InitializeComponent();
+            if(Login.permission != "admin")
+            {
+                bt_add.Enabled = false;
+                bt_delete.Enabled = false;
+                bt_update.Enabled = false;
+                txtMANV.Enabled = false;
+                txtDIACHI.Enabled = false;
+                txtSDT.Enabled = false;
+                txtTENNV.Enabled = false;
+                cbbGIOITINH.Enabled = false;
+                dtpNGAYSINH.Enabled = false;
+            }    
         }
         Connections conn = new Connections();
         void HienThi()
@@ -76,6 +88,11 @@ namespace Code
             txtDIACHI.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             cbbGIOITINH.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtSDT.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = conn.XemDL("SELECT * From nhanvien where nhanvien.hoten Like N'%" + tb_findname.Text + "%'");
         }
     }
 }

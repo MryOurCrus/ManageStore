@@ -91,7 +91,7 @@ namespace Code
                     txtSLSP.Text = tinhTongSLDGV().ToString();
                 };
             }
-            catch (Exception ex) {
+            catch (Exception ) {
 
                     MessageBox.Show("Mời chọn sp cần xóa");
             };

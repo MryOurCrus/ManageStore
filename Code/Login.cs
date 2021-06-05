@@ -63,6 +63,9 @@ namespace Code
                 Application.Exit();
         }
 
-
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+            this.password.UseSystemPasswordChar = true;
+        }
     }
 }

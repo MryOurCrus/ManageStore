@@ -54,6 +54,7 @@ namespace Code
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(152, 22);
             this.password.TabIndex = 1;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // lbUserName
             // 
@@ -61,7 +62,7 @@ namespace Code
             this.lbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUserName.Location = new System.Drawing.Point(104, 150);
             this.lbUserName.Name = "lbUserName";
-            this.lbUserName.Size = new System.Drawing.Size(82, 16);
+            this.lbUserName.Size = new System.Drawing.Size(84, 16);
             this.lbUserName.TabIndex = 2;
             this.lbUserName.Text = "UserName";
             // 
@@ -71,7 +72,7 @@ namespace Code
             this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPassword.Location = new System.Drawing.Point(104, 190);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(76, 16);
+            this.lbPassword.Size = new System.Drawing.Size(79, 16);
             this.lbPassword.TabIndex = 3;
             this.lbPassword.Text = "Password";
             // 
@@ -124,11 +125,13 @@ namespace Code
             // 
             // Login
             // 
+            this.AcceptButton = this.btLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImage = global::Code.Properties.Resources.thuc_an_nhanh;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.btExit;
             this.ClientSize = new System.Drawing.Size(490, 311);
             this.Controls.Add(this.btExit);
             this.Controls.Add(this.label2);

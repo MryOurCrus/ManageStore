@@ -15,6 +15,11 @@ namespace Code
         public Home()
         {
             InitializeComponent();
+            if(Login.permission != "admin")
+            {
+                userList.Enabled = false;
+                thốngKêToolStripMenuItem.Enabled = false;
+            }    
         }
 
         private void changePassword_Click(object sender, EventArgs e)
@@ -70,6 +75,18 @@ namespace Code
         private void kháchHàngToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Form frm = new Customers();
+            frm.Show();
+        }
+
+        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new ThongKe();
+            frm.Show();
+        }
+
+        private void userList_Click(object sender, EventArgs e)
+        {
+            Form frm = new UserMN();
             frm.Show();
         }
     }
