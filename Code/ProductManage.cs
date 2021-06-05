@@ -91,5 +91,10 @@ namespace Code
             //da.Fill(table);
             dataGridView1.DataSource = conn.XemDL("SELECT * From sanpham where sanpham.tensp = N'" + tb_findname.Text+"'");
         }
+
+        private void ProductManage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Ngatketnoi();
+        }
     }
 }

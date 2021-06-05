@@ -46,7 +46,7 @@ namespace Code
 
             return dt;
 
-            // Ngatketnoi();
+            //Ngatketnoi();
         }
 
         //Phương thức truy vấn dữ liệu: Insert, Update, Delete
@@ -59,7 +59,7 @@ namespace Code
 
             return cm;
 
-            // Ngatketnoi();
+           // Ngatketnoi();
         }
     }
 }

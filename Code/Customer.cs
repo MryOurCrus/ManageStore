@@ -21,5 +21,10 @@ namespace Code
         {
             dataGridView1.DataSource = conn.XemDL("SELECT * from khachhang");
         }
+
+        private void Customer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Ngatketnoi();
+        }
     }
 }

@@ -40,8 +40,8 @@ namespace Code
         private void logout_Click(object sender, EventArgs e)
         {
             Form frm = new Login();
-            this.Close();
             frm.Show();
+            this.Hide();
         }
 
         private void xemHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
