@@ -26,6 +26,18 @@ namespace Code
 
 
         }
+        void reset()
+        {
+            txtKhach.Text = "";
+            txtPhone.Text = "";
+            tb_MHD.Text = "";
+            tbTong.Text = "";
+            txtTongTien.Text = "";
+            txtSLSP.Text = "";
+            txtAddr.Text = "";
+            nud_SL.Value = 1;
+            dataGridView1.Rows.Clear();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -37,6 +49,7 @@ namespace Code
                 prbill.printBill(txtKhach.Text, txtPhone.Text, tb_MHD.Text, tbTong.Text, dateTimePicker3.Value.ToShortDateString(), txtTongTien.Text, txtSLSP.Text);
                 prbill.Show();
                 //HienThi();
+                reset();
             }
             catch (Exception ex)
             {

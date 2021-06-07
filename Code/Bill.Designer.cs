@@ -199,7 +199,7 @@ namespace Code
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(163, 22);
             this.dateTimePicker3.TabIndex = 25;
-            this.dateTimePicker3.Value = new System.DateTime(2021, 5, 31, 12, 23, 58, 0);
+            this.dateTimePicker3.Value = new System.DateTime(2021, 6, 7, 10, 10, 44, 0);
             // 
             // label10
             // 

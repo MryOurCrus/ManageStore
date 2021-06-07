@@ -64,3 +64,5 @@ D:\GIT_CNPM\Code\obj\Debug\Code.exe
 D:\GIT_CNPM\Code\obj\Debug\Code.pdb
 D:\GIT_CNPM\Code\obj\Debug\Code.ThongKe.resources
 D:\GIT_CNPM\Code\obj\Debug\Code.UserMN.resources
+D:\C#_Clone\ManageStore\Code\obj\Debug\Code.ThongKe.resources
+D:\C#_Clone\ManageStore\Code\obj\Debug\Code.UserMN.resources

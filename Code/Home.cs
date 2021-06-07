@@ -19,6 +19,7 @@ namespace Code
             {
                 userList.Enabled = false;
                 thốngKêToolStripMenuItem.Enabled = false;
+                NhanvienMenubt.Enabled = false;
             }    
         }
 
